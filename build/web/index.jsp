@@ -19,7 +19,33 @@
         <div class="container">
             <form action="" method="post" class="form-group">
                 <label for="lbl_codigo">Codigo:</label>
-                <input type="text" class="form-control" id="usr">
+                <input type="text" name="txt_codigo" id="txt_codigo" class="form-control" placeholder="Ejemplo: E001" required="">
+
+                <label for="lbl_nombres">Nombres:</label>
+                <input type="text" name="txt_nombres" id="txt_nombres" class="form-control" placeholder="Ejemplo: Eli Alejandro" required="">
+
+                <label for="lbl_apellidos">Apellidos:</label>
+                <input type="text" name="txt_apellidos" id="txt_apellidos" class="form-control" placeholder="Ejemplo: Ochoa" required="">                
+
+                <label for="lbl_direccion">Direccion:</label>
+                <input type="text" name="txt_direccion" id="txt_direccion" class="form-control" placeholder="Ejemplo: Casa 11-73 Villa Nueva" required="">                
+
+                <label for="lbl_telefono">Telefono:</label>
+                <input type="number" name="txt_telefono" id="txt_telefono" class="form-control" placeholder="Ejemplo: E001" required="">                
+
+                <label for="lbl_fn">Fecha Nacimiento:</label>
+                <input type="date" name="txt_fn" id="txt_fn" class="form-control" placeholder="Ejemplo: E001" required=""> 
+
+                <label for="lbl_sangre">Tipo Sangre:</label>
+                <select name="drop_sangre" id="drop_sangre" class="form-control">
+                    <option value="1"> Opcion 1</option>
+                    <option value="2"> Opcion 2</option>
+                    <option value="3"> Opcion 3</option>
+                    <option value="4"> Opcion 4</option>
+                </select>
+                <br>
+                <button type="button" name="btn_agregar" id="btn_agregar" class="btn btn-primary btn-lg" >Agregar</button>
+                
             </form>
             
         </div>
