@@ -4,7 +4,7 @@
     Author     : Elicho
 --%>
 
-<%@page import="modelo.Empleado" %>
+<%@page import="modelo.Puesto" %>
 <%@page import="java.util.HashMap" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
     <body>
         <h1>Formulario empleados</h1>
         <div class="container">
-            <form action="" method="post" class="form-group">
+            <form action="ar_empleado" method="post" class="form-group">
                 <label for="lbl_codigo">Codigo:</label>
                 <input type="text" name="txt_codigo" id="txt_codigo" class="form-control" placeholder="Ejemplo: E001" required="">
 
@@ -41,8 +41,8 @@
                 <label for="lbl_sangre">Tipo Sangre:</label>
                 <select name="drop_sangre" id="drop_sangre" class="form-control">
                     <%
-                    Empleado empleado =new Empleado();
-                    HashMap<String,String> drop=empleado.drop_sangre();
+                    Puesto puesto =new Puesto();
+                    HashMap<String,String> drop=puesto.drop_sangre();
                     for (String i: drop.keySet()){
                     out.println("<option value='"+ i +"'>" +drop.get(i) + "</option> ");
                         
@@ -52,7 +52,7 @@
                     %>
                 </select>
                 <br>
-                <button type="button" name="btn_agregar" id="btn_agregar" class="btn btn-primary btn-lg" >Agregar</button>
+                <button name="btn_agregar" id="btn_agregar" value="agregar" class="btn btn-primary btn-lg" >Agregar</button>
                 
             </form>
             
