@@ -10,6 +10,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import modelo.Empleado;
 
 /**
  *
@@ -26,6 +27,7 @@ public class ar_empleado extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    Empleado empleado;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -38,6 +40,21 @@ public class ar_empleado extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
 //            out.println("<h1>Servlet ar_empleado at " + request.getContextPath() + "</h1>");
+            if("agregar".equals(request.getParameter("btn_agregar"))){
+            empleado = new Empleado(request.getParameter("txt_codigo"),Integer.valueOf(request.getParameter("drop_sangre")),0,request.getParameter("txt_nombres"),request.getParameter("txt_apellidos"),request.getParameter("txt_direccion"),request.getParameter("txt_telefono"),request.getParameter("txt_fn"));
+            if(empleado.agregar()>0){            
+                 out.println("<h1>Ingreso Exitoso</h1>");
+                 out.println("<a href='index.jsp'>Regresar</a>");
+            }
+            else {
+            out.println("<h1>Error...</h1>");
+            out.println("<a href='index.jsp'>Regresar</a>");
+            }
+            }
+
+            
+            //out.println("<h1>Ingreso Exitoso</h>");
+            /*
             out.println("<p>"+ request.getParameter("txt_codigo") +"</p>");
             out.println("<p>"+ request.getParameter("txt_nombres") +"</p>");
             out.println("<p>"+ request.getParameter("txt_apellidos") +"</p>");
@@ -45,7 +62,7 @@ public class ar_empleado extends HttpServlet {
             out.println("<p>"+ request.getParameter("txt_telefono") +"</p>");
             out.println("<p>"+ request.getParameter("txt_fn") +"</p>");
             out.println("<p>"+ request.getParameter("drop_sangre") +"</p>");            
-            
+            */
             out.println("</body>");
             out.println("</html>");
         }

@@ -53,7 +53,7 @@
                 </select>
                 <br>
                 <button name="btn_agregar" id="btn_agregar" value="agregar" class="btn btn-primary btn-lg" >Agregar</button>
-                
+                <button name="btn_modificar" id="btn_modificar" value="modificar" class="btn btn-primary btn-lg" >Modificar</button>                
             </form>
             
         </div>

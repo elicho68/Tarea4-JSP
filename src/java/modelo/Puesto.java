@@ -54,7 +54,7 @@ public Puesto (){
         }
         cn.cerrar_conexion();
             
-        }catch(Exception ex){
+        }catch(SQLException ex){
         System.out.println(ex.getMessage());
         }
         return drop;

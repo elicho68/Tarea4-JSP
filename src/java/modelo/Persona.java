@@ -74,8 +74,8 @@ abstract class Persona {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public void agregar(){}
-    public void modificar(){}
-    public void eliminar(){}
-    public void mostrar(){}    
+    public int agregar(){return 0;}
+    public int modificar(){return 0;}
+    public int eliminar(){return 0;}
+    ///public void mostrar(){}    
 }
